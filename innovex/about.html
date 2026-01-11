@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+  <!-- SNOW -->
+  <div class="snow-container"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div id="about">
+    <div class="aboutlogo">
+      <img src="images/Innovexlogo.png" alt="Innovex Logo">
+    </div>
+
+    <h2>About Us</h2>
+
+    <p>
+      <i>
+        Innovex is a student-led technical fest organized by the Data Science
+        Department of Nirmala College. Focused on innovation, technology, and
+        analytical thinking, this fest brings together students from Data Science,
+        Computer Science, AI, ML, IT, and related fields.
+        <br><br>
+        <b>Innovate. Analyze. Evolve.</b>
+      </i>
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="location">
+    Department of Data Science —
+    <a href=>
+      Nirmala College Muvattupuzha (Autonomous)
+    </a>
+  </div>
+
+  <!-- SNOW SCRIPT -->
+  <script>
+    const snowContainer = document.querySelector(".snow-container");
+
+    for (let i = 0; i < 80; i++) {
+      const flake = document.createElement("div");
+      flake.className = "snowflake";
+      flake.textContent = "*";
+
+      flake.style.left = Math.random() * 100 + "vw";
+      flake.style.fontSize = 8 + Math.random() * 12 + "px";
+      flake.style.animationDuration = 5 + Math.random() * 10 + "s";
+      flake.style.opacity = Math.random();
+
+      snowContainer.appendChild(flake);
+    }
+  </script>
+
+</body>
+</html>

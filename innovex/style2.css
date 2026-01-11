@@ -1,0 +1,148 @@
+   * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(90deg, #560875, #130e1e);
+      color: aliceblue;
+      
+    }
+
+    /* NAVBAR */
+    .nav-links {
+      position: fixed;
+      top: 60px;
+      right: 30px;
+      display: flex;
+      gap: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      z-index: 10;
+      animation: fadeIn 1s ease;
+      display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-links a {
+      color: #dcdcff;
+      text-decoration: none;
+      padding: 8px 12px;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background: #dcdcff;
+      transform: translateX(-50%);
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* CENTER CONTENT */
+    #about {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+       animation: fadeIn 1s ease;
+    }
+
+    /* LOGO */
+    .aboutlogo img {
+      width: 90px;
+      margin-bottom: 20px;
+      animation: reflect 3s infinite ease-in-out;
+    }
+
+    @keyframes reflect {
+      0% { transform: scaleX(1); }
+      50% { transform: scaleX(-1); }
+      100% { transform: scaleX(1); }
+    }
+     @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      max-width: 900px;
+      line-height: 1.6;
+      color: #dcdcff;
+      padding: 0 20px;
+    }
+
+    /* FOOTER LOCATION */
+    .location {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      color: #dcdcff;
+      text-align: center;
+      z-index: 2;
+      position: fixed;
+    }
+
+    .location a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* SNOW EFFECT */
+    .snow-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      color: white;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
